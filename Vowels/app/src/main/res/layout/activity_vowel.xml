@@ -6,4 +6,51 @@
     android:layout_height="match_parent"
     tools:context="io.github.afagarap.vowels.VowelActivity">
 
+    <RelativeLayout
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/string_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="79dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:hint="@string/text_hint" />
+
+        <Button
+            android:id="@+id/count_remove_vowels_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/string_input"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:text="@string/btn_count_remove_vowels" />
+
+        <TextView
+            android:id="@+id/vowel_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/count_remove_vowels_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:text="@string/vowel_count"
+            android:textSize="12pt" />
+
+        <TextView
+            android:id="@+id/new_string_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vowel_count_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:text="@string/string_with_no_vowel"
+            android:textSize="12pt" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
