@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/darth/AndroidStudioProjects/KeyloggerService/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/darth/.android/build-cache/ce3bd500300531f9669b313b587f094c9ff57714/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/darth/AndroidStudioProjects/KeyloggerService/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/darth/.android/build-cache/ce3bd500300531f9669b313b587f094c9ff57714/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

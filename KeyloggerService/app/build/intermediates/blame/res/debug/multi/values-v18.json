@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/home/darth/AndroidStudioProjects/KeyloggerService/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "/home/darth/.android/build-cache/ce3bd500300531f9669b313b587f094c9ff57714/output/res/values-v18/values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+    }
+]
