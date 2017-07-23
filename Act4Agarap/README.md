@@ -1,4 +1,4 @@
-Vowels
+Act4Agarap
 ==
 
 This is a laboratory activity for 25048 Mobile Computing Lab last 07/22/2017. The objective of the project is as simple as follows:
@@ -8,16 +8,11 @@ This is a laboratory activity for 25048 Mobile Computing Lab last 07/22/2017. Th
 * Pass the processed string to another activity using intent.
 * Display the number of each character in the processed string in the new activity.
 
-![](figures/vowel-1.png)
+![](figures/act4agarap-1.png)
 
-Type a string input to be processed.
-
-
-![](figures/vowel-2.png)
-
-A Toast object shows up when the string is processed.
+Type a string input, then with the "Count & Remove Vowels", the string shall be processed, i.e. the number of vowels shall be counted and the vowels shall be removed.
 
 
-![](figures/vowel-3.png)
+![](figures/act4agarap-2.png)
 
-The app shows the number of vowel letters in the given user string input, and a version of the user string input without vowels.
+The processed string shall be passed to a new activity through an intent. Then, the count of each character in the string shall be displayed in the new activity.
