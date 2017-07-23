@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vowels</string>
+    <string name="text_hint">Start typing here...</string>
+    <string name="btn_count_remove_vowels">Count &amp; Remove Vowels</string>
+    <string name="vowel_count">Vowel Count: </string>
+    <string name="string_with_no_vowel">New Text: </string>
+    <string name="character_count">Character Count</string>
+</resources>
