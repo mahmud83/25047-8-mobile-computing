@@ -6,5 +6,7 @@ package io.github.afagarap.vowels;
 
 final class Constants {
     static final String PACKAGE_NAME = "io.github.afagarap";
+
+    // constant value to be used as intent extra name
     static final String PROCESSED_STRING = PACKAGE_NAME + ".VOWELS";
 }
