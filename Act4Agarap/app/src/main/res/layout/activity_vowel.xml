@@ -12,6 +12,8 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
+        <!-- android:maxLength limits the number of character
+             that can be entered into the EditText  -->
         <EditText
             android:id="@+id/string_input"
             android:layout_width="match_parent"
