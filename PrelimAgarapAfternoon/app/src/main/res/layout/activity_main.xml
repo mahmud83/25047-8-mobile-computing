@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.afagarap.prelimagarapafternoon.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <Button
+            android:id="@+id/btnTriangularNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Get Triangular of Number" />
+
+        <Button
+            android:id="@+id/btnGuessNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnTriangularNumber"
+            android:layout_centerHorizontal="true"
+            android:text="Guess a Number" />
+
+        <Button
+            android:id="@+id/btnCountRepeated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnTriangularNumber"
+            android:layout_below="@+id/btnTriangularNumber"
+            android:text="String Reversal, Count Repeated" />
+
+        <TextView
+            android:id="@+id/textPrelimAgarapAfternoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnGuessNumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="27dp"
+            android:text="Choose a Module"
+            android:textSize="24sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
