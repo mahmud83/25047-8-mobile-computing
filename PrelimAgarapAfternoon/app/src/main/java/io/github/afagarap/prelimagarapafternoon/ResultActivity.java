@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
@@ -12,6 +11,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class ResultActivity extends AppCompatActivity {
+
     private TextView mResultText;
 
     @Override
