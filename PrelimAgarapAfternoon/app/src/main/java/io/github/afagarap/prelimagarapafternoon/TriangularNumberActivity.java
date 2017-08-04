@@ -32,7 +32,8 @@ public class TriangularNumberActivity extends AppCompatActivity {
         mComputeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                triangularNumber = getTriangularNumber(Integer.parseInt(mInputText.getText().toString()));
+                input = Integer.parseInt(mInputText.getText().toString());
+                triangularNumber = getTriangularNumber(input);
                 mResultText.setText(String.format(Locale.ENGLISH, "%s : %d", "Result", triangularNumber));
             }
         });
@@ -46,11 +47,21 @@ public class TriangularNumberActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Returns the triangular number of an input number
+     * @param input
+     * @return
+     */
     public static int getTriangularNumber(int input) {
         int n = input * (input + 1) / 2;
         return n;
     }
 
+    /**
+     * Returns a text containing
+     * triangular numbers from 1 to 10
+     * @return
+     */
     public static String displayTenTriangularNumbers() {
         String text = "";
         for (int i = 1; i < 11; i++) {
