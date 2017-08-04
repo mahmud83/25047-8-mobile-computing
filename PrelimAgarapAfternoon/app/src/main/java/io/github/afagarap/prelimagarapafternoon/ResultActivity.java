@@ -22,12 +22,32 @@ public class ResultActivity extends AppCompatActivity {
         mResultText = (TextView) findViewById(R.id.textResult);
 
         Intent intent = getIntent();
+
+        // get the stored 'TEXT' extra
         String text = intent.getExtras().getString("TEXT");
+
+        // get the reversed string
+        String reversedText = reverseString(text);
+
+        // display the reversed string
+        mResultText.setText(reversedText);
+
+        // get the count of each letter in the string
+        Map map = countLetters(reversedText);
+
+        // display the characters with count > 1
+        displayCharacterCount(map);
+    }
+
+    /**
+     * Returns the reversed version of the passed string
+     * @param text
+     * @return
+     */
+    public String reverseString(String text) {
         StringBuffer buffer = new StringBuffer(text);
         String reversedText = buffer.reverse().toString();
-        mResultText.setText(reversedText);
-        Map map = countLetters(reversedText);
-        displayCharacterCount(map);
+        return reversedText;
     }
 
     /**

@@ -40,20 +40,25 @@ public class ReverseRepeatedActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
             @Override
             public void onClick(View view) {
+                // create an intent to start an activity displaying the result
                 Intent intent = new Intent(ReverseRepeatedActivity.this, ResultActivity.class);
+
+                // get text from widget
                 text = mInputText.getText().toString();
+
+                // validate if string is not empty
                 if (!text.isEmpty()){
+                    // use regex to extract alphabet characters only
                     text = text.replaceAll("[^A-Za-z]+", "");
+
+                    // store the extracted text as intent extra
                     intent.putExtra("TEXT", text);
                 } else {
                     Toast.makeText(getApplicationContext(), "Empty string!", Toast.LENGTH_SHORT).show();
                 }
+
+                // start the activity to display the result
                 startActivity(intent);
-
-
-
-
-
             }
         });
     }
