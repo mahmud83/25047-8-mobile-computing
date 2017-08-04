@@ -25,12 +25,5 @@
             android:layout_below="@id/textInput"
             android:text="Execute"/>
 
-        <TextView
-            android:id="@+id/textReversedString"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnReverse"
-            android:text="Result:"
-            android:textSize="12pt"/>
-        </RelativeLayout>
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
