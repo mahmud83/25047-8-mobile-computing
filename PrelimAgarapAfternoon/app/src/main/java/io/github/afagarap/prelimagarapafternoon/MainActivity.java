@@ -43,16 +43,25 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Starts the Guessing Number activity
+     */
     private void startGuessNumber() {
         Intent intent = new Intent(MainActivity.this, GuessNumberActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Starts the Triangular Number activity
+     */
     private void startTriangularNumber() {
         Intent intent = new Intent(MainActivity.this, TriangularNumberActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Starts the ReverseRepeated activity
+     */
     private void startReverseRepeated() {
         Intent intent = new Intent(MainActivity.this, ReverseRepeatedActivity.class);
         startActivity(intent);
