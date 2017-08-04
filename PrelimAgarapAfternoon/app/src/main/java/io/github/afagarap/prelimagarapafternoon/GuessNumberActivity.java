@@ -17,7 +17,6 @@ public class GuessNumberActivity extends AppCompatActivity {
 
     private static int guessNumber;
     private static int randomNumber;
-    private static String textGuessNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,8 @@ public class GuessNumberActivity extends AppCompatActivity {
         mTryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int status = tryGuessNumber(randomNumber, mTextGuessInput.getText().toString());
+                guessNumber = Integer.parseInt(mTextGuessInput.getText().toString());
+                int status = tryGuessNumber(randomNumber, guessNumber);
 
                 if (status == 1) {
                     Toast.makeText(getApplicationContext(), "Your guess was right.", Toast.LENGTH_SHORT).show();
@@ -54,19 +54,31 @@ public class GuessNumberActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Returns a generated random number
+     * @return
+     */
     public static int generateRandomNumber() {
         Random random = new Random();
         int random_number = random.nextInt(21 - 1) + 1;
         return random_number;
     }
 
-    public static int tryGuessNumber(int random_number, String textGuessNumber) {
-        int guess_number = Integer.parseInt(textGuessNumber);
-        if (random_number == guess_number) {
+    /**
+     * Returns a status_code indicating if the guessNumber is correct:
+     * 1 if correct,
+     * 0 if greater than the random number
+     * -1 if less than the random number
+     * @param random_number
+     * @param guessNumber
+     * @return
+     */
+    public static int tryGuessNumber(int random_number, int guessNumber) {
+        if (random_number == guessNumber) {
             return 1;
-        } else if (random_number < guess_number) {
+        } else if (random_number < guessNumber) {
             return 0;
-        } else if (random_number > guess_number) {
+        } else if (random_number > guessNumber) {
             return -1;
         }
         return -1;
