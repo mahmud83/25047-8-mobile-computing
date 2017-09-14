@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context="mobilecomputinglab.tictactoeafternoon.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/board" />
+
+    <ImageView
+        android:id="@+id/imageCell0"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="65dp"
+        android:layout_above="@+id/imageCell4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imageCell1"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/imageCell0"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/imageCell2"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red"
+        android:layout_alignTop="@+id/imageCell1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <ImageView
+        android:id="@+id/imageCell3"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red"
+        android:layout_alignTop="@+id/imageCell4"
+        android:layout_alignLeft="@+id/imageCell0"
+        android:layout_alignStart="@+id/imageCell0" />
+
+    <ImageView
+        android:id="@+id/imageCell4"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/imageCell1"
+        android:layout_alignStart="@+id/imageCell1"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/imageCell5"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red"
+        android:layout_alignTop="@+id/imageCell4"
+        android:layout_alignLeft="@+id/imageCell2"
+        android:layout_alignStart="@+id/imageCell2" />
+
+    <ImageView
+        android:id="@+id/imageCell6"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red"
+        android:layout_alignTop="@+id/imageCell7"
+        android:layout_alignLeft="@+id/imageCell3"
+        android:layout_alignStart="@+id/imageCell3" />
+
+    <ImageView
+        android:id="@+id/imageCell7"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="59dp"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red"
+        android:layout_below="@+id/imageCell4"
+        android:layout_alignLeft="@+id/imageCell4"
+        android:layout_alignStart="@+id/imageCell4" />
+
+    <ImageView
+        android:id="@+id/imageCell8"
+        android:alpha="0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/red"
+        android:layout_alignTop="@+id/imageCell7"
+        android:layout_alignLeft="@+id/imageCell5"
+        android:layout_alignStart="@+id/imageCell5" />
+
+</RelativeLayout>
