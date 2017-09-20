@@ -1,4 +1,7 @@
 # 25047-8-mobile-computing
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
 Android Projects done in 25047/25048 Mobile Computing course at Adamson University (1st semester, 2017-2018)
 
 * [Login Screen](https://github.com/AFAgarap/25047-8-mobile-computing/tree/master/Login). A simple login screen, just a layout, no methods (Done 07/08/2017). 
