@@ -22,8 +22,9 @@
         <activity android:name=".AnimationActivity" />
         <activity android:name=".AtmLoginActivity" />
         <activity android:name=".AtmRegistrationActivity" />
-        <activity android:name=".TransactionActivity"></activity>
+        <activity android:name=".TransactionActivity"/>
         <activity android:name=".TriangularActivity"/>
+        <activity android:name=".TictactoeActivity"/>
     </application>
 
 </manifest>
