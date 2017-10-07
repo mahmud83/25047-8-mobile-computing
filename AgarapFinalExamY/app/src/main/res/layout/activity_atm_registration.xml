@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.afagarap.agarapfinalexamy.AtmRegistrationActivity">
+
+    <TextView
+        android:id="@+id/accountNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Number:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="86dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/accountNumberEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="1234-5678-9"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="78dp"
+        app:layout_constraintLeft_toRightOf="@+id/accountNumberTextView"
+        android:layout_marginLeft="28dp" />
+
+    <TextView
+        android:id="@+id/accountPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Password:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="129dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/accountPasswordEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="********"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="121dp"
+        app:layout_constraintLeft_toRightOf="@+id/accountPasswordTextView"
+        android:layout_marginLeft="12dp" />
+
+    <TextView
+        android:id="@+id/accountBalanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Balance:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="175dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/accountBalanceEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="123456789"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="164dp"
+        app:layout_constraintLeft_toRightOf="@+id/accountBalanceTextView"
+        android:layout_marginLeft="28dp" />
+
+    <TextView
+        android:id="@+id/accountPinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account PIN:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="219dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/accountPinEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="1234"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="207dp"
+        app:layout_constraintLeft_toRightOf="@+id/accountPinTextView"
+        android:layout_marginLeft="63dp" />
+
+    <Button
+        android:id="@+id/atmRegistrationRegisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="277dp"
+        android:text="Register"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

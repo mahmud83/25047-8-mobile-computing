@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context="io.github.afagarap.agarapfinalexamy.TictactoeActivity">
+
+
+    <ImageView
+        android:id="@+id/imageBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/board" />
+
+    <ImageView
+        android:id="@+id/imageCell0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/imageCell4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="65dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <ImageView
+        android:id="@+id/imageCell1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/imageCell0"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <ImageView
+        android:id="@+id/imageCell2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageCell1"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <ImageView
+        android:id="@+id/imageCell3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/imageCell0"
+        android:layout_alignStart="@+id/imageCell0"
+        android:layout_alignTop="@+id/imageCell4"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <ImageView
+        android:id="@+id/imageCell4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/imageCell1"
+        android:layout_alignStart="@+id/imageCell1"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <ImageView
+        android:id="@+id/imageCell5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/imageCell2"
+        android:layout_alignStart="@+id/imageCell2"
+        android:layout_alignTop="@+id/imageCell4"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <ImageView
+        android:id="@+id/imageCell6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/imageCell3"
+        android:layout_alignStart="@+id/imageCell3"
+        android:layout_alignTop="@+id/imageCell7"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <ImageView
+        android:id="@+id/imageCell7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/imageCell4"
+        android:layout_alignStart="@+id/imageCell4"
+        android:layout_below="@+id/imageCell4"
+        android:layout_marginTop="59dp"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <ImageView
+        android:id="@+id/imageCell8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/imageCell5"
+        android:layout_alignStart="@+id/imageCell5"
+        android:layout_alignTop="@+id/imageCell7"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        app:srcCompat="@drawable/jake" />
+
+    <Button
+        android:id="@+id/buttonRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Restart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/imageCell6"
+        android:layout_alignStart="@+id/imageCell6" />
+
+    <Button
+        android:id="@+id/buttonPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonRestart"
+        android:layout_alignEnd="@+id/imageCell8"
+        android:layout_alignRight="@+id/imageCell8"
+        android:text="Play Again" />
+
+    <TextView
+        android:id="@+id/textScoreJake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageCell0"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imageCell0"
+        android:layout_marginTop="14dp"
+        android:text="Jake:" />
+
+    <TextView
+        android:id="@+id/textScoreFinn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageCell2"
+        android:layout_alignStart="@+id/imageCell2"
+        android:layout_alignTop="@+id/textScoreJake"
+        android:text="Finn:" />
+
+</RelativeLayout>
