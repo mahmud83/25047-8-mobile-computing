@@ -25,6 +25,8 @@
         <activity android:name=".TransactionActivity"/>
         <activity android:name=".TriangularActivity"/>
         <activity android:name=".TictactoeActivity"/>
+        <activity android:name=".BalanceActivity"/>
+        <activity android:name=".WithdrawalActivity"/>
     </application>
 
 </manifest>
