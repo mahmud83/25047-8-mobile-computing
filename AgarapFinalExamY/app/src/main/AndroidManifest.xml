@@ -23,6 +23,7 @@
         <activity android:name=".AtmLoginActivity" />
         <activity android:name=".AtmRegistrationActivity" />
         <activity android:name=".TransactionActivity"></activity>
+        <activity android:name=".TriangularActivity"/>
     </application>
 
 </manifest>
