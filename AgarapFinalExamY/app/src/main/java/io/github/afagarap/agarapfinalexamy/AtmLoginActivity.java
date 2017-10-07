@@ -18,7 +18,7 @@ public class AtmLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_atm_login);
 
         Button registerButton = (Button) findViewById(R.id.atmLoginRegisterButton);
         Button loginButton = (Button) findViewById(R.id.atmLoginButton);
