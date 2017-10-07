@@ -32,7 +32,7 @@ public class AtmRegistrationActivity extends AppCompatActivity {
         mAccountBalanceEditText = (EditText) findViewById(R.id.accountBalanceEditText);
         mAccountPinEditText = (EditText) findViewById(R.id.accountPinEditText);
 
-        mRegisterButton = (Button) findViewById(R.id.registrationRegisterButton);
+        mRegisterButton = (Button) findViewById(R.id.atmRegistrationRegisterButton);
 
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +44,7 @@ public class AtmRegistrationActivity extends AppCompatActivity {
 
                 if (mAccountNumber.length() != 0 && mAccountPassword.length() != 0
                         && mAccountBalance != 0.0f && mAccountPin.length() != 0) {
-                    Intent intent = new Intent(AtmRegistrationActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(AtmRegistrationActivity.this, AtmLoginActivity.class);
                     intent.putExtra(Constants.ACCOUNT_NUMBER, mAccountNumber);
                     intent.putExtra(Constants.ACCOUNT_PASSWORD, mAccountPassword);
                     intent.putExtra(Constants.ACCOUNT_BALANCE, mAccountBalance);
