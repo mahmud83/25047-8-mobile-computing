@@ -25,14 +25,14 @@ public class AtmRegistrationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+        setContentView(R.layout.activity_atm_registration);
 
         mAccountNumberEditText = (EditText) findViewById(R.id.accountNumberEditText);
         mAccountPasswordEditText = (EditText) findViewById(R.id.accountPasswordEditText);
         mAccountBalanceEditText = (EditText) findViewById(R.id.accountBalanceEditText);
         mAccountPinEditText = (EditText) findViewById(R.id.accountPinEditText);
 
-        mRegisterButton = (Button) findViewById(R.id.atmLoginRegisterButton);
+        mRegisterButton = (Button) findViewById(R.id.registrationRegisterButton);
 
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
