@@ -48,7 +48,7 @@ public class WithdrawalActivity extends AppCompatActivity {
                         mAmountToWithdraw = Float.valueOf(mAmountEditText.getText().toString());
                         if (mAccountBalance >= mAmountToWithdraw) {
                             mAccountBalance -= mAmountToWithdraw;
-                            mNewBalanceTextView.setText(String.format(Locale.ENGLISH, "%s: %f",
+                            mNewBalanceTextView.setText(String.format(Locale.ENGLISH, "%s %f",
                                     mNewBalanceTextView.getText().toString(), mAccountBalance));
                         } else if (mAccountBalance < mAmountToWithdraw && mAccountBalance >= 0) {
                             Toast.makeText(WithdrawalActivity.this, "Insufficient funds!", Toast.LENGTH_SHORT).show();
