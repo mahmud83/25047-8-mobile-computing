@@ -53,8 +53,7 @@ public class TriangularActivity extends AppCompatActivity {
      * @return
      */
     public static int getTriangularNumber(int input) {
-        int n = input * (input + 1) / 2;
-        return n;
+        return input * (input + 1) / 2;
     }
 
     /**
