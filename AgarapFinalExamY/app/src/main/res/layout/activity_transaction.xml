@@ -31,8 +31,8 @@
         android:id="@+id/withdrawButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="143dp"
-        android:text="Withdraw"
+        android:layout_marginStart="143dp"
+        android:text="@string/withdraw_text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="163dp" />

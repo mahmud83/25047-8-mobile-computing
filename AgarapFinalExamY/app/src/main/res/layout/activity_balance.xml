@@ -10,20 +10,20 @@
         android:id="@+id/checkBalanceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Check Balance"
+        android:text="@string/check_balance_text"
         android:layout_marginTop="14dp"
         app:layout_constraintTop_toBottomOf="@+id/accountPinEditText"
-        android:layout_marginLeft="125dp"
+        android:layout_marginStart="125dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/mAccountBalanceLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Balance: "
+        android:text="@string/account_balance_text"
         android:layout_marginTop="28dp"
         app:layout_constraintTop_toBottomOf="@+id/checkBalanceButton"
-        android:layout_marginLeft="125dp"
+        android:layout_marginStart="125dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
@@ -31,21 +31,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Pin"
+        android:hint="@string/account_pin_text"
         android:inputType="textPersonName"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="88dp"
-        android:layout_marginLeft="85dp"
+        android:layout_marginStart="85dp"
         app:layout_constraintLeft_toLeftOf="parent" />
-
-    <TextView
-        android:id="@+id/mAccountBalanceTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintLeft_toRightOf="@+id/mAccountBalanceLabelTextView"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintTop_toBottomOf="@+id/checkBalanceButton" />
 
 </android.support.constraint.ConstraintLayout>
