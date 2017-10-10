@@ -10,4 +10,6 @@
     <string name="finn_text">Finn:</string>
     <string name="board_text">Board</string>
     <string name="check_balance_text">Check Balance</string>
+    <string name="account_number_text">Account Number</string>
+    <string name="password_text">Password</string>
 </resources>
