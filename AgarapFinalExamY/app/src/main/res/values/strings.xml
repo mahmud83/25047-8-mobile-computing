@@ -12,4 +12,12 @@
     <string name="check_balance_text">Check Balance</string>
     <string name="account_number_text">Account Number</string>
     <string name="login_text">Login</string>
+    <string name="account_password_text">Account Password:</string>
+    <string name="account_number_hint_text">1234-5678-9</string>
+    <string name="account_password_hint_text">********</string>
+    <string name="account_balance_text">Account Balance:</string>
+    <string name="account_balance_hint_text">123456789</string>
+    <string name="account_pin_text">Account PIN:</string>
+    <string name="account_pin_hint_text">1234</string>
+    <string name="withdraw_text">Withdraw</string>
 </resources>
