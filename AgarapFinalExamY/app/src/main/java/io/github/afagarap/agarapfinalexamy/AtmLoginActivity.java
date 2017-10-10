@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 public class AtmLoginActivity extends AppCompatActivity {
 
-    private String mAccountNumber, mAccountPassword, mAccountPin;
+    private String mAccountNumber;
+    private String mAccountPassword;
+    private String mAccountPin;
     private float mAccountBalance;
 
     private EditText mAccountNumberEditText, mAccountPasswordEditText;
