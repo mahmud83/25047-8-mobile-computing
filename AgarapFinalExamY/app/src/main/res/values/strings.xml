@@ -20,4 +20,12 @@
     <string name="account_pin_text">Account PIN:</string>
     <string name="account_pin_hint_text">1234</string>
     <string name="withdraw_text">Withdraw</string>
+    <string name="username_text">Username</string>
+    <string name="greetings_text">Good day,</string>
+    <string name="tictactoe_text">TicTacToe</string>
+    <string name="triangular_text">Triangular</string>
+    <string name="atm_text">ATM</string>
+    <string name="animation_text">Animation</string>
+    <string name="first_name_text">First Name</string>
+    <string name="last_name_text">Last Name</string>
 </resources>
