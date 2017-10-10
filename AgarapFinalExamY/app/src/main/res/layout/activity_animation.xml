@@ -16,7 +16,7 @@
         android:contentDescription="Google Chrome logo"
         app:srcCompat="@drawable/chromelogo"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -29,7 +29,7 @@
         android:contentDescription="Mozilla Firefox logo"
         app:srcCompat="@drawable/firefox"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
