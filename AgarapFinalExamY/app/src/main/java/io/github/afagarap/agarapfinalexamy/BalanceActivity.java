@@ -16,6 +16,7 @@ public class BalanceActivity extends AppCompatActivity {
     private TextView mAccountBalanceLabelTextView;
     private EditText mAccountPinEditText;
 
+    private float mAccountBalance;
     private String mAccountPin;
 
     @Override
@@ -28,20 +29,16 @@ public class BalanceActivity extends AppCompatActivity {
         mAccountPinEditText = (EditText) findViewById(R.id.accountPinEditText);
         Button mCheckBalanceButton = (Button) findViewById(R.id.checkBalanceButton);
 
-        mAccountBalanceLabelTextView.setVisibility(View.INVISIBLE);
-
         Intent intent = getIntent();
-        float mAccountBalance = intent.getExtras().getFloat(Constants.ACCOUNT_BALANCE);
+        mAccountBalance = intent.getExtras().getFloat(Constants.ACCOUNT_BALANCE);
         mAccountPin = intent.getExtras().getString(Constants.ACCOUNT_PIN);
-
-        mAccountBalanceLabelTextView.setText(String.format(Locale.ENGLISH, "%s : %s",
-                mAccountBalanceLabelTextView.getText(), mAccountBalance));
 
         mCheckBalanceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mAccountPinEditText.getText() != null && mAccountPinEditText.getText().toString().equals(mAccountPin)) {
-                    mAccountBalanceLabelTextView.setVisibility(View.VISIBLE);
+                    mAccountBalanceLabelTextView.setText(String.format(Locale.ENGLISH, "%s : %s",
+                            mAccountBalanceLabelTextView.getText(), mAccountBalance));
                 } else {
                     Toast.makeText(BalanceActivity.this, "Invalid Pin", Toast.LENGTH_SHORT).show();
                 }
