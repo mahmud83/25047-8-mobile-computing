@@ -28,4 +28,5 @@
     <string name="animation_text">Animation</string>
     <string name="first_name_text">First Name</string>
     <string name="last_name_text">Last Name</string>
+    <string name="logout_text">Logout</string>
 </resources>
