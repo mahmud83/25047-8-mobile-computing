@@ -7,10 +7,10 @@
     tools:context="io.github.afagarap.agarapfinalexamy.TransactionActivity">
 
     <ImageView
+        android:contentDescription="@string/octocat_text"
         android:id="@+id/imageviewOctocatTransaction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:alpha="0.2"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,9 +21,8 @@
         android:id="@+id/checkBalanceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="125dp"
         android:layout_marginTop="98dp"
-        android:text="Check Balance"
+        android:text="@string/check_balance_text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="125dp" />

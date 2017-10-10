@@ -54,10 +54,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textUsername"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="85dp"
+        android:layout_marginStart="85dp"
         android:layout_marginTop="363dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password_text"
         android:inputType="textPassword"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="117dp"
+        android:layout_marginStart="117dp"
         android:layout_marginTop="90dp"
         android:adjustViewBounds="true"
         android:maxHeight="150dp"
@@ -76,15 +76,16 @@
         android:scaleType="fitCenter"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/octocat" />
+        app:srcCompat="@drawable/octocat"
+        android:contentDescription="@string/octocat_text"/>
 
     <Button
         android:id="@+id/registrationRegisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="148dp"
+        android:layout_marginStart="148dp"
         android:layout_marginTop="406dp"
-        android:text="Register"
+        android:text="@string/register_text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

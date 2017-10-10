@@ -10,12 +10,13 @@
         android:id="@+id/imageviewOctocat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="-181dp"
+        android:layout_marginStart="-181dp"
         android:layout_marginTop="16dp"
         android:alpha="0.2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/octocat" />
+        app:srcCompat="@drawable/octocat"
+        android:contentDescription="@string/octocat_text"/>
 
     <Button
         android:id="@+id/buttonAnimation"

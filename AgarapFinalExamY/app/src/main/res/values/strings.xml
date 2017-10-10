@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">AgarapFinalExamY</string>
+    <string name="register_text">Register</string>
+    <string name="octocat_text">Octocat logo</string>
+    <string name="password_text">Password</string>
+    <string name="cell_name">Tictactoe chip</string>
+    <string name="restart_text">Restart</string>
+    <string name="play_again_text">Play Again</string>
+    <string name="jake_text">Jake:</string>
+    <string name="finn_text">Finn:</string>
+    <string name="board_text">Board</string>
+    <string name="check_balance_text">Check Balance</string>
 </resources>
