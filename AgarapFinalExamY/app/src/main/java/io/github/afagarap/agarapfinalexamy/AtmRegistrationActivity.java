@@ -9,8 +9,6 @@ import android.widget.EditText;
 
 public class AtmRegistrationActivity extends AppCompatActivity {
 
-    private static final String TAG_NAME = RegistrationActivity.class.getSimpleName();
-
     private EditText mAccountNumberEditText;
     private EditText mAccountPasswordEditText;
     private EditText mAccountBalanceEditText;
