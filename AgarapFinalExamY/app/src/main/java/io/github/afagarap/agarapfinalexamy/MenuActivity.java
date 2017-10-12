@@ -6,34 +6,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
 public class MenuActivity extends AppCompatActivity {
-
-    private Button mAnimationButton;
-    private Button mAtmButton;
-    private Button mTriangularButton;
-    private Button mTictactoeButton;
-
-    private TextView mTextViewGreeting;
-
-    private String mFirstName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        mAnimationButton = (Button) findViewById(R.id.buttonAnimation);
-        mAtmButton = (Button) findViewById(R.id.buttonATM);
-        mTriangularButton = (Button) findViewById(R.id.buttonTriangular);
-        mTictactoeButton = (Button) findViewById(R.id.buttonTictactoe);
+        Button mAnimationButton = (Button) findViewById(R.id.buttonAnimation);
+        Button mAtmButton = (Button) findViewById(R.id.buttonATM);
+        Button mTriangularButton = (Button) findViewById(R.id.buttonTriangular);
+        Button mTictactoeButton = (Button) findViewById(R.id.buttonTictactoe);
+        Button mLogoutButton = (Button) findViewById(R.id.buttonLogout);
 
-        mTextViewGreeting = (TextView) findViewById(R.id.textViewGreetings);
+        TextView mTextViewGreeting = (TextView) findViewById(R.id.textViewGreetings);
 
-        Intent intent = getIntent();
-        mFirstName = intent.getExtras().getString(Constants.FIRSTNAME);
+        final Bundle bundle = getIntent().getExtras();
+        String mFirstName = bundle.getString(Constants.FIRSTNAME);
         mTextViewGreeting.setText(String.format(Locale.ENGLISH, "%s %s",
                 mTextViewGreeting.getText(), mFirstName));
 
@@ -49,6 +42,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MenuActivity.this, AtmLoginActivity.class);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -68,5 +62,19 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mLogoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(MenuActivity.this, "No back button!", Toast.LENGTH_SHORT).show();
     }
 }
