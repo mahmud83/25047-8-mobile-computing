@@ -20,8 +20,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,8 +32,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Data schema
@@ -79,14 +86,19 @@ public class MainActivity extends AppCompatActivity {
     EditText mLastNameEditText;
     EditText mStudentNumberQueryEditText;
 
+    ListView mRecordsListView;
+
     Button mAddRecordButton;
     Button mSearchButton;
+    Button mRetrieveRecords;
 
     String mStudentNumber;
     String mFirstName;
     String mMiddleName;
     String mLastName;
 
+    List<String> mStudentRecords = new ArrayList<>();
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,8 +111,11 @@ public class MainActivity extends AppCompatActivity {
         mLastNameEditText = (EditText) findViewById(R.id.lastNameEditText);
         mStudentNumberQueryEditText = (EditText) findViewById(R.id.studentNumberQueryEditText);
 
+        mRecordsListView = (ListView) findViewById(R.id.recordsListView);
+
         mAddRecordButton = (Button) findViewById(R.id.addRecordButton);
         mSearchButton = (Button) findViewById(R.id.searchButton);
+        mRetrieveRecords = (Button) findViewById(R.id.retrieveRecordsButton);
 
         mAddRecordButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,6 +151,14 @@ public class MainActivity extends AppCompatActivity {
                 mStudentNumber = mStudentNumberQueryEditText.getText().toString();
 
                 getRecord(ref, mStudentNumber);
+            }
+        });
+
+        mRetrieveRecords.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference ref = instantiateFirebase();
+                getAllRecord(ref);
             }
         });
     }
@@ -197,5 +220,58 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, databaseError.toString());
             }
         });
+    }
+
+    public void getAllRecord(DatabaseReference ref) {
+        final HashMap<String, Object> singleRecord = new HashMap<>();
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Convert the dataSnapshot (HashMap) object to ArrayList
+                mapToList((Map)dataSnapshot.getValue());
+                // makes the ListView real-time
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        // create adapter for the ListView
+        adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, mStudentRecords);
+
+        // connect the ListView to its adapter
+        mRecordsListView.setAdapter(adapter);
+    }
+
+    public void mapToList(Map<String, Object> map) {
+        mStudentRecords.clear();
+        for (Map.Entry<String, Object> entry : map.entrySet()) {
+            // extract HashMap key from Firebase database
+            String key = entry.getKey();
+
+            // extract HashMap value from Firebase database
+            Object value = entry.getValue();
+
+            // Since the HashMap value is also a HashMap, based on data schema, i.e.
+            // "students" {
+            //      [studentNumber] {
+            //          "mFirstName" : value1,
+            //          "mMiddleName" : value2,
+            //          "mLastName" : value3
+            //      }
+            // }
+            // extract the values from the HashMap studentNumber
+            String firstName = (String) ((Map)(value)).get("mFirstName");
+            String middleName = (String) ((Map)(value)).get("mMiddleName");
+            String lastName = (String) ((Map)(value)).get("mLastName");
+
+            // Add the extracted HashMap values to the ArrayList
+            mStudentRecords.add(String.format(Locale.ENGLISH, "%s : %s %s %s",
+                    key, firstName, middleName, lastName));
+        }
     }
 }
