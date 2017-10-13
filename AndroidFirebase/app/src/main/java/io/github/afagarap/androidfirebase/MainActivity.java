@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         mAddRecordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference ref = instantiateFirebase();
+                DatabaseReference ref = instantiateFirebase("students");
 
                 mStudentNumber = mStudentNumberEditText.getText().toString();
                 mFirstName = mFirstNameEditText.getText().toString();
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         mSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference ref = instantiateFirebase();
+                DatabaseReference ref = instantiateFirebase("students");
 
                 mStudentNumber = mStudentNumberQueryEditText.getText().toString();
 
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
         mRetrieveRecords.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference ref = instantiateFirebase();
+                DatabaseReference ref = instantiateFirebase("programs");
                 getAllRecord(ref);
             }
         });
@@ -175,9 +175,37 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public DatabaseReference instantiateFirebase() {
+    /**
+     * Returns an instantiated Firebase database
+     * @param parent The string which refers to the parent node to retrieve, e.g.
+     *               android-firebase-f066a {
+     *                  programs {
+     *                      arts {
+     *                          major : value_1
+     *                      }
+     *                      science {
+     *                          major : value_1
+     *                      }
+     *                  }
+     *                  students {
+     *                          student_number_n {
+     *                                  mFirstName : value_1,
+     *                                  mMiddleName : value_2,
+     *                                  mLastName : value_3
+     *                          }
+     *                  }
+     *               }
+     *               `parent` may refer to either 'programs' or 'students, i.e. when calling
+     *               DatabaseReference refStudents = instantiateFirebase("students");
+     *
+     *               or
+     *
+     *               DatabaseReference refPrograms = instantiateFirebase("programs");
+     * @return
+     */
+    public DatabaseReference instantiateFirebase(String parent) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("students");
+        DatabaseReference myRef = database.getReference(parent);
         return myRef;
     }
 
@@ -265,13 +293,17 @@ public class MainActivity extends AppCompatActivity {
             //      }
             // }
             // extract the values from the HashMap studentNumber
-            String firstName = (String) ((Map)(value)).get("mFirstName");
-            String middleName = (String) ((Map)(value)).get("mMiddleName");
-            String lastName = (String) ((Map)(value)).get("mLastName");
+            // String firstName = (String) ((Map)(value)).get("mFirstName");
+            // String middleName = (String) ((Map)(value)).get("mMiddleName");
+            // String lastName = (String) ((Map)(value)).get("mLastName");
 
             // Add the extracted HashMap values to the ArrayList
-            mStudentRecords.add(String.format(Locale.ENGLISH, "%s : %s %s %s",
-                    key, firstName, middleName, lastName));
+            /*mStudentRecords.add(String.format(Locale.ENGLISH, "%s : %s %s %s",
+                    key, firstName, middleName, lastName));*/
+
+            // Since the getAllRecords() now refers to the 'programs',
+            // this is an example of retrieving the children of 'programs'.
+            mStudentRecords.add(String.format(Locale.ENGLISH, "%s : %s", key, value));
         }
     }
 }
